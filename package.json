@@ -1,0 +1,21 @@
+{
+  "name": "pro_shop",
+  "version": "1.0.0",
+  "description": "EasyShop commerce",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server"
+  },
+  "keywords": [],
+  "author": "Mohammed Hussain",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0"
+  }
+}
