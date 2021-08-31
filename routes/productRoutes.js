@@ -7,9 +7,7 @@ import Product from "../models/productModel.js";
 // @route GET/api/products
 // @access  public
 
-router.get(
-  "/",
-  asyncHandler(async (req, res) => {
+router.get("/",asyncHandler(async (req, res) => {
     const products = await Product.find({});
     res.json(products);
   })
@@ -19,15 +17,15 @@ router.get(
 // @route GET/api/products/:id
 // @access  public
 
-router.get(
-  "/:id",
-  asyncHandler(async (req, res) => {
-    const product = await Product.find(req.params.id);
+router.get("/:id", asyncHandler(async (req, res) => {
+    console.log("reach here")
+    const product = await Product.findById(req.params.id);
 
     if (product) {
       res.json(product);
     } else {
-      res.status(404).json({ massege: "Product not found" });
+      res.status(404)
+      throw new Error('Product not found')
     }
   })
 );
